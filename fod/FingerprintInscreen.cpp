@@ -19,11 +19,16 @@
 #include "FingerprintInscreen.h"
 
 #include <android-base/logging.h>
+#include <fcntl.h>
 #include <android-base/properties.h>
 #include <hardware_legacy/power.h>
-
+#include <poll.h>
+#include <sys/stat.h>
+#include <thread>
 #include <cmath>
 #include <fstream>
+
+#define FINGERPRINT_ACQUIRED_VENDOR 6
 
 #define COMMAND_NIT 10
 #define PARAM_NIT_630_FOD 1
