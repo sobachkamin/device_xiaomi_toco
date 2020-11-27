@@ -17,7 +17,6 @@ cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     name: "lineage.biometrics.fingerprint.inscreen@1.0-service.toco",
-    vintf_fragments: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_toco.xml"],
     init_rc: ["lineage.biometrics.fingerprint.inscreen@1.0-service.toco.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     shared_libs: [
