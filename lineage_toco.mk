@@ -9,11 +9,13 @@ $(call inherit-product, device/xiaomi/toco/device.mk)
 # Inherit some
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common EvolutionX stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_toco
+PRODUCT_NAME := evolution_toco
 PRODUCT_DEVICE := toco
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi Note 10 Lite
