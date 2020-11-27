@@ -47,6 +47,27 @@
 
 #define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness_clone"
 
+namespace {
+static bool readBool(int fd) {
+    char c;
+    int rc;
+
+    rc = lseek(fd, 0, SEEK_SET);
+    if (rc) {
+        LOG(ERROR) << "failed to seek fd, err: " << rc;
+        return false;
+    }
+
+    rc = read(fd, &c, sizeof(char));
+    if (rc != 1) {
+        LOG(ERROR) << "failed to read bool from fd, err: " << rc;
+        return false;
+    }
+
+    return c != '0';
+}
+}
+
 namespace vendor {
 namespace lineage {
 namespace biometrics {
