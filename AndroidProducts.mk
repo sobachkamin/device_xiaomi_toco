@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_toco.mk
+    $(LOCAL_DIR)/evolution_toco.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_toco-user \
-    lineage_toco-userdebug \
-    lineage_toco-eng
+    evolution_toco-user \
+    evolution_toco-userdebug \
+    evolution_toco-eng
