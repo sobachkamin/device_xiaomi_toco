@@ -1,1 +1,2 @@
-DT Device based on AndroidHQ254 DT LOS18.0
+Toco device tree
+based on androidhq254 works
