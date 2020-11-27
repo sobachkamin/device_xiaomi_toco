@@ -18,12 +18,11 @@
 
 uint32_t getFodZOrder(uint32_t z, bool touched) {
     if (touched) {
-        z |= FOD_PRESSED_LAYER_ZORDER;
+        z |= 0x1000000;
     }
     return z;
 }
 
 uint64_t getFodUsageBits(uint64_t usageBits, bool) {
-    (void) touched;
     return usageBits;
 }
